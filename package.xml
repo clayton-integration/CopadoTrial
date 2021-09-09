@@ -5,7 +5,11 @@
         <name>ApexClass</name>
     </types>
     <types>
-        <members>MyNewFlow</members>
+        <members>MaxDecision_Flow</members>
+        <name>Flow</name>
+    </types>
+    <types>
+        <members>MaxDecision_Flow</members>
         <name>FlowDefinition</name>
     </types>
     <version>52.0</version>
