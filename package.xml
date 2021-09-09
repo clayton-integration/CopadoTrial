@@ -4,5 +4,9 @@
         <members>MyController</members>
         <name>ApexClass</name>
     </types>
+    <types>
+        <members>MyNewFlow</members>
+        <name>FlowDefinition</name>
+    </types>
     <version>52.0</version>
 </Package>
