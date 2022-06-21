@@ -4,5 +4,13 @@
         <members>MyController</members>
         <name>ApexClass</name>
     </types>
+    <types>
+        <members>MaxDecision_Flow</members>
+        <name>Flow</name>
+    </types>
+    <types>
+        <members>MaxDecision_Flow</members>
+        <name>FlowDefinition</name>
+    </types>
     <version>54.0</version>
 </Package>
