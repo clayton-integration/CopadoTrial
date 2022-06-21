@@ -4,6 +4,7 @@
     <formFactors>Large</formFactors>
     <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
     <label>Timba Surveys</label>
     <tabs>TIMBASURVEYS__Timba_Surveys</tabs>
     <tabs>TIMBASURVEYS__TimbaSurveys_CP</tabs>
