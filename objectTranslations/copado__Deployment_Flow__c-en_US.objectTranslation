@@ -149,6 +149,18 @@ This value will prefill the order by field on related Promotion record creation 
         <name>copado__Order_by__c</name>
     </fields>
     <fields>
+        <label><!-- Platform --></label>
+        <name>copado__Platform__c</name>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Salesforce</masterLabel>
+            <translation><!-- Salesforce --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
         <help><!-- Static Code Analysis settings used whenever the analysis is run in Environments or User Stories linked to the Deployment Flow. --></help>
         <label><!-- Static Code Analysis Settings --></label>
         <name>copado__Static_Code_Analysis_Settings__c</name>
@@ -169,6 +181,10 @@ This value will prefill the order by field on related Promotion record creation 
     <webLinks>
         <label><!-- Manage_Regression_Tests --></label>
         <name>copado__Manage_Regression_Tests</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Pipeline_Wizard --></label>
+        <name>copado__Pipeline_Wizard</name>
     </webLinks>
     <webLinks>
         <label><!-- Select_Main_Branch --></label>

@@ -32,6 +32,10 @@
                 <behavior>Edit</behavior>
                 <field>copado__Calculate_Based_on__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Required</behavior>
+                <field>copado__Platform__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -86,6 +90,10 @@
                 <behavior>Edit</behavior>
                 <field>copado__Block_Commits__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>copado__Enable_Smart_Conflict_Resolution__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -127,6 +135,51 @@
     <platformActionList>
         <actionListContext>Record</actionListContext>
         <platformActionListItems>
+            <actionName>copado__Select_Main_Branch</actionName>
+            <actionType>CustomButton</actionType>
+            <sortOrder>7</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>copado__Manage_Branches</actionName>
+            <actionType>CustomButton</actionType>
+            <sortOrder>8</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>copado__Manage_Environment_Variables</actionName>
+            <actionType>CustomButton</actionType>
+            <sortOrder>9</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>copado__Manage_Regression_Tests</actionName>
+            <actionType>CustomButton</actionType>
+            <sortOrder>10</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>copado__Find_Replace_Rule_Editor</actionName>
+            <actionType>CustomButton</actionType>
+            <sortOrder>11</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>copado__Deployment_Flow__c.copado__Clone_with_Environments</actionName>
+            <actionType>QuickAction</actionType>
+            <sortOrder>3</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>ChangeOwnerOne</actionName>
+            <actionType>StandardButton</actionType>
+            <sortOrder>4</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>ChangeRecordType</actionName>
+            <actionType>StandardButton</actionType>
+            <sortOrder>5</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
+            <actionName>Share</actionName>
+            <actionType>StandardButton</actionType>
+            <sortOrder>6</sortOrder>
+        </platformActionListItems>
+        <platformActionListItems>
             <actionName>Edit</actionName>
             <actionType>StandardButton</actionType>
             <sortOrder>0</sortOrder>
@@ -141,46 +194,6 @@
             <actionType>StandardButton</actionType>
             <sortOrder>2</sortOrder>
         </platformActionListItems>
-        <platformActionListItems>
-            <actionName>ChangeOwnerOne</actionName>
-            <actionType>StandardButton</actionType>
-            <sortOrder>3</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>ChangeRecordType</actionName>
-            <actionType>StandardButton</actionType>
-            <sortOrder>4</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>Share</actionName>
-            <actionType>StandardButton</actionType>
-            <sortOrder>5</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>copado__Select_Main_Branch</actionName>
-            <actionType>CustomButton</actionType>
-            <sortOrder>6</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>copado__Manage_Branches</actionName>
-            <actionType>CustomButton</actionType>
-            <sortOrder>7</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>copado__Manage_Environment_Variables</actionName>
-            <actionType>CustomButton</actionType>
-            <sortOrder>8</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>copado__Manage_Regression_Tests</actionName>
-            <actionType>CustomButton</actionType>
-            <sortOrder>9</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>copado__Find_Replace_Rule_Editor</actionName>
-            <actionType>CustomButton</actionType>
-            <sortOrder>10</sortOrder>
-        </platformActionListItems>
     </platformActionList>
     <relatedLists>
         <fields>NAME</fields>
@@ -190,6 +203,17 @@
         <fields>CREATEDBY_USER</fields>
         <fields>UPDATEDBY_USER</fields>
         <relatedList>copado__Deployment_Flow_Step__c.copado__Deployment_Flow__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <excludeButtons>MassChangeOwner</excludeButtons>
+        <fields>NAME</fields>
+        <fields>copado__API_Name__c</fields>
+        <fields>copado__Value__c</fields>
+        <fields>copado__Is_Sensitive__c</fields>
+        <fields>copado__Environment__c</fields>
+        <fields>copado__ParentId__c</fields>
+        <fields>copado__User__c</fields>
+        <relatedList>copado__System_Property__c.copado__Pipeline__c</relatedList>
     </relatedLists>
     <relatedLists>
         <excludeButtons>New</excludeButtons>
@@ -202,13 +226,59 @@
     <relatedLists>
         <relatedList>RelatedNoteList</relatedList>
     </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
+        <fields>copado__Quality_Gate_Rule__c</fields>
+        <fields>copado__Status__c</fields>
+        <fields>copado__Tool__c</fields>
+        <fields>copado__ExecutionSequence__c</fields>
+        <fields>copado__Actions__c</fields>
+        <fields>copado__Platform__c</fields>
+        <fields>copado__Environment__c</fields>
+        <relatedList>copado__Quality_Gate_Rule_Condition__c.copado__Pipeline__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <excludeButtons>MassChangeOwner</excludeButtons>
+        <fields>NAME</fields>
+        <fields>copado__Action__c</fields>
+        <fields>copado__Job_Template__c</fields>
+        <fields>copado__Environment__c</fields>
+        <fields>copado__Default__c</fields>
+        <fields>copado__Overrides_Pipeline_Action__c</fields>
+        <relatedList>copado__Pipeline_Action__c.copado__Pipeline__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <excludeButtons>MassChangeOwner</excludeButtons>
+        <fields>NAME</fields>
+        <fields>copado__Stage__c.NAME</fields>
+        <fields>copado__Next_Stage_Connection__c</fields>
+        <fields>copado__Next_Stage__c</fields>
+        <relatedList>copado__Stage_Connection__c.copado__Pipeline__c</relatedList>
+        <sortField>NAME</sortField>
+        <sortOrder>Asc</sortOrder>
+    </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
+        <fields>copado__Owner__c</fields>
+        <fields>copado__Share_With__c</fields>
+        <relatedList>copado__Filter__c.copado__Pipeline__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
+        <fields>copado__Active__c</fields>
+        <fields>copado__Source_Action__c</fields>
+        <fields>copado__Source_Action_Status__c</fields>
+        <fields>copado__Automated_Action__c</fields>
+        <fields>copado__Execution__c</fields>
+        <relatedList>copado__Automation_Rule__c.copado__Pipeline__c</relatedList>
+    </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>
     <showHighlightsPanel>false</showHighlightsPanel>
     <showInteractionLogPanel>false</showInteractionLogPanel>
     <showRunAssignmentRulesCheckbox>false</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>false</showSubmitAndAttachButton>
     <summaryLayout>
-        <masterLabel>00h1n0000050AmA</masterLabel>
+        <masterLabel>00h1n000005WT9Z</masterLabel>
         <sizeX>4</sizeX>
         <sizeY>0</sizeY>
         <summaryLayoutStyle>Default</summaryLayoutStyle>
