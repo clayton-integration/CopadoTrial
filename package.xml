@@ -13,5 +13,5 @@
         <members>MyNewFlow</members>
         <name>FlowDefinition</name>
     </types>
-    <version>55.0</version>
+    <version>56.0</version>
 </Package>
