@@ -3,7 +3,6 @@
     <types>
         <members>MyController</members>
         <members>SOQLController</members>
-        <members>SOQLController2</members>
         <name>ApexClass</name>
     </types>
     <types>
