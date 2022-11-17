@@ -36,6 +36,11 @@
         <name>copado__Current_SCA_Score__c</name>
     </fields>
     <fields>
+        <help><!-- Enable Rollbacks for any Deployments/Promotions have this Environment as destination. Rollbacks will be available for Deployments/Promotions created after this feature is enabled --></help>
+        <label><!-- Enable Rollback --></label>
+        <name>copado__Enable_Rollback__c</name>
+    </fields>
+    <fields>
         <help><!-- If enabled, when a Back Promotion is completed and contains Metadata found in User Stories in the destination Environment, the status of the User Story Metadata records of these User Stories will be updated to &quot;Back Promoted&quot;. --></help>
         <label><!-- Index Back Promotion Metadata --></label>
         <name>copado__Index_Back_Promotion_metadata__c</name>
@@ -43,6 +48,10 @@
     <fields>
         <label><!-- Last Compliance Scan Date --></label>
         <name>copado__Last_Compliance_Scan_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Refresh Date --></label>
+        <name>copado__Last_Refresh_Date__c</name>
     </fields>
     <fields>
         <label><!-- Latest Deployment Status --></label>
@@ -105,12 +114,24 @@
         <name>copado__Org_ID__c</name>
     </fields>
     <fields>
+        <label><!-- Platform --></label>
+        <name>copado__Platform__c</name>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Salesforce</masterLabel>
+            <translation><!-- Salesforce --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
         <help><!-- The Default Credential for the target Org is always selected by default. Optionally, the Default Credential can be selected only if the user has no Org Credential for the target Org. --></help>
         <label><!-- Promotion Default Credential --></label>
         <name>copado__Promotion_Default_Credential__c</name>
         <picklistValues>
-            <masterLabel>All Promotions</masterLabel>
-            <translation><!-- All Promotions --></translation>
+            <masterLabel>Always</masterLabel>
+            <translation><!-- Always --></translation>
         </picklistValues>
         <picklistValues>
             <masterLabel>Only If User Has No Org Credential</masterLabel>

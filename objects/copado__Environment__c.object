@@ -243,6 +243,17 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>copado__Enable_Rollback__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Enable Rollbacks for any Deployments/Promotions have this Environment as destination. Rollbacks will be available for Deployments/Promotions created after this feature is enabled</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enable Rollbacks for any Deployments/Promotions have this Environment as destination. Rollbacks will be available for Deployments/Promotions created after this feature is enabled</inlineHelpText>
+        <label>Enable Rollback</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>copado__Index_Back_Promotion_metadata__c</fullName>
         <defaultValue>true</defaultValue>
         <deprecated>false</deprecated>
@@ -260,6 +271,15 @@
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>copado__Last_Refresh_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Last Refresh Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
     </fields>
     <fields>
         <fullName>copado__Latest_Deployment_Status__c</fullName>
@@ -380,6 +400,31 @@
         <unique>true</unique>
     </fields>
     <fields>
+        <fullName>copado__Platform__c</fullName>
+        <defaultValue>&quot;Salesforce&quot;</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Platform</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Salesforce</fullName>
+                    <default>true</default>
+                    <label>Salesforce</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
         <fullName>copado__Promotion_Default_Credential__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
@@ -393,14 +438,20 @@
             <valueSetDefinition>
                 <sorted>false</sorted>
                 <value>
-                    <fullName>All Promotions</fullName>
+                    <fullName>Always</fullName>
                     <default>true</default>
-                    <label>All Promotions</label>
+                    <label>Always</label>
                 </value>
                 <value>
                     <fullName>Only If User Has No Org Credential</fullName>
                     <default>false</default>
                     <label>Only If User Has No Org Credential</label>
+                </value>
+                <value>
+                    <fullName>All Promotions</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>All Promotions</label>
                 </value>
             </valueSetDefinition>
         </valueSet>
@@ -501,6 +552,7 @@
         <lookupDialogsAdditionalFields>LAST_UPDATE</lookupDialogsAdditionalFields>
         <searchFilterFields>NAME</searchFilterFields>
         <searchFilterFields>copado__Org_ID__c</searchFilterFields>
+        <searchResultsAdditionalFields>copado__Platform__c</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>copado__Type__c</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>copado__Minimum_Apex_Test_Coverage__c</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>copado__Org_ID__c</searchResultsAdditionalFields>
