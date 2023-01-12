@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>ClaytonCopadoIntegration__c.ApiUser__c</members>
-        <members>ClaytonCopadoIntegration__c.ClientId__c</members>
-        <members>ClaytonCopadoIntegration__c.ClientSecret__c</members>
+        <members>ClaytonCopadoIntegration__c.AccountId__c</members>
+        <members>ClaytonCopadoIntegration__c.ApiPassword__c</members>
         <name>CustomField</name>
+    </types>
+    <types>
+        <members>ClaytonCopadoIntegration__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>FlowOrchestrationWorkItem.All_Work_Items</members>
+        <name>ListView</name>
     </types>
     <version>56.0</version>
 </Package>
