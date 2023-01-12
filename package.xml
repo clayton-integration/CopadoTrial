@@ -6,8 +6,13 @@
         <name>ApexClass</name>
     </types>
     <types>
+        <members>ClaytonCopadoIntegration__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
         <members>FlowOrchestrationInstance.All_Orchestration_Instances</members>
         <members>FlowOrchestrationWorkItem.ALL_Open_Work_Items</members>
+        <members>FlowOrchestrationWorkItem.All_Work_Items</members>
         <name>ListView</name>
     </types>
     <version>56.0</version>
