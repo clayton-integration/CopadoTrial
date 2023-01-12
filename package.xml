@@ -6,8 +6,8 @@
         <name>ApexClass</name>
     </types>
     <types>
-        <members>FlowOrchestrationInstance.All_Orchestration_Instances</members>
-        <name>ListView</name>
+        <members>ClaytonCopadoIntegration__c</members>
+        <name>CustomObject</name>
     </types>
     <version>56.0</version>
 </Package>
