@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>SOQLController</members>
-        <members>SOQLController2</members>
-        <name>ApexClass</name>
+        <members>ClaytonCopadoIntegration__c.AccountId__c</members>
+        <name>CustomField</name>
     </types>
     <types>
-        <members>FlowOrchestrationInstance.All_Orchestration_Instances</members>
+        <members>ClaytonCopadoIntegration__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
         <members>FlowOrchestrationWorkItem.ALL_Open_Work_Items</members>
+        <members>FlowOrchestrationWorkItem.All_Work_Items</members>
         <name>ListView</name>
     </types>
     <version>56.0</version>
