@@ -18,10 +18,6 @@ private class GeocodingServiceTest {
         address.state = STATE;
         address.country = COUNTRY;
 
-        Test.setMock(
-            HttpCalloutMock.class,
-            new OpenStreetMapHttpCalloutMockImpl()
-        );
 
         // THEN
         Assert.isNotNull(address);
@@ -30,11 +26,6 @@ private class GeocodingServiceTest {
     static void blankAddress() {
         // GIVEN
         GeocodingService.GeocodingAddress address = new GeocodingService.GeocodingAddress();
-
-        Test.setMock(
-            HttpCalloutMock.class,
-            new OpenStreetMapHttpCalloutMockImpl()
-        );
 
         // THEN
         Assert.isNotNull(address);
@@ -48,12 +39,6 @@ private class GeocodingServiceTest {
         address.postalcode = POSTAL_CODE;
         address.state = STATE;
         address.country = COUNTRY;
-
-        Test.setMock(
-            HttpCalloutMock.class,
-            new OpenStreetMapHttpCalloutMockImplError()
-        );
-
 
 
         // THEN
