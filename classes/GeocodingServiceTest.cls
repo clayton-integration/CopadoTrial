@@ -1,5 +1,5 @@
 @isTest
-private class GeocodingServiceTest {
+private with sharing class GeocodingServiceTest {
     private static final String STREET = 'Camino del Jueves 26';
     private static final String CITY = 'Armilla';
     private static final String POSTAL_CODE = '18100';
@@ -18,17 +18,40 @@ private class GeocodingServiceTest {
         address.state = STATE;
         address.country = COUNTRY;
 
+        Test.setMock(
+            HttpCalloutMock.class,
+            new OpenStreetMapHttpCalloutMockImpl()
+        );
+
+        // WHEN
+        List<GeocodingService.Coordinates> computedCoordinates = GeocodingService.geocodeAddresses(
+            new List<GeocodingService.GeocodingAddress>{ address }
+        );
 
         // THEN
-        Assert.isNotNull(address);
+        Assert.areEqual(1, computedCoordinates.size());
+        Assert.areEqual(LATITUDE, computedCoordinates[0].lat);
+        Assert.areEqual(LONGITUDE, computedCoordinates[0].lon);
     }
     @isTest
     static void blankAddress() {
         // GIVEN
         GeocodingService.GeocodingAddress address = new GeocodingService.GeocodingAddress();
 
+        Test.setMock(
+            HttpCalloutMock.class,
+            new OpenStreetMapHttpCalloutMockImpl()
+        );
+
+        // WHEN
+        List<GeocodingService.Coordinates> computedCoordinates = GeocodingService.geocodeAddresses(
+            new List<GeocodingService.GeocodingAddress>{ address }
+        );
+
         // THEN
-        Assert.isNotNull(address);
+        Assert.areEqual(1, computedCoordinates.size());
+        Assert.isNull(computedCoordinates[0].lat);
+        Assert.isNull(computedCoordinates[0].lon);
     }
     @isTest
     static void errorResponse() {
@@ -40,9 +63,20 @@ private class GeocodingServiceTest {
         address.state = STATE;
         address.country = COUNTRY;
 
+        Test.setMock(
+            HttpCalloutMock.class,
+            new OpenStreetMapHttpCalloutMockImplError()
+        );
+
+        // WHEN
+        List<GeocodingService.Coordinates> computedCoordinates = GeocodingService.geocodeAddresses(
+            new List<GeocodingService.GeocodingAddress>{ address }
+        );
 
         // THEN
-        Assert.isNotNull(address);
+        Assert.areEqual(1, computedCoordinates.size());
+        Assert.isNull(computedCoordinates[0].lat);
+        Assert.isNull(computedCoordinates[0].lon);
     }
 
     public class OpenStreetMapHttpCalloutMockImpl implements HttpCalloutMock {
