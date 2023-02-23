@@ -3,7 +3,7 @@ public with sharing class SOQLController2 {
 
     }
 
-
+// comment
     @AuraEnabled
     public static String getCandidateGrade(String contactId) { 
         
