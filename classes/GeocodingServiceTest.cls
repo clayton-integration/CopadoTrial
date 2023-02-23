@@ -20,7 +20,7 @@ private class GeocodingServiceTest {
 
 
         // THEN
-        Assert.isNotNull(address);
+        Assert.isNotNull(address, 'Assert that the address is not null.');
     }
     @isTest
     static void blankAddress() {
@@ -28,7 +28,7 @@ private class GeocodingServiceTest {
         GeocodingService.GeocodingAddress address = new GeocodingService.GeocodingAddress();
 
         // THEN
-        Assert.isNotNull(address);
+        Assert.isNotNull(address, 'Assert that the address is not null.');
     }
     @isTest
     static void errorResponse() {
@@ -42,7 +42,7 @@ private class GeocodingServiceTest {
 
 
         // THEN
-        Assert.isNotNull(address);
+        Assert.isNotNull(address, 'Assert that the address is not null.');
     }
 
     public class OpenStreetMapHttpCalloutMockImpl implements HttpCalloutMock {
