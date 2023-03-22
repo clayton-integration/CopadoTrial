@@ -5,12 +5,15 @@
         <members>GeocodingServiceTest</members>
         <members>MyController</members>
         <members>MyExampleClassTest</members>
-        <members>SOQLController</members>
         <name>ApexClass</name>
     </types>
     <types>
         <members>MyNewFlow</members>
         <name>Flow</name>
+    </types>
+    <types>
+        <members>MyNewFlow</members>
+        <name>FlowDefinition</name>
     </types>
     <version>57.0</version>
 </Package>
