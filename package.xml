@@ -5,6 +5,7 @@
         <members>GeocodingServiceTest</members>
         <members>MyController</members>
         <members>MyExampleClassTest</members>
+        <members>SOQLController</members>
         <members>SOQLController2</members>
         <name>ApexClass</name>
     </types>
