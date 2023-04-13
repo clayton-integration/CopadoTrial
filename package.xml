@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>ClaytonCopadoIntegration__c.AccountId__c</members>
-        <name>CustomField</name>
+        <members>MyNewFlow</members>
+        <name>Flow</name>
     </types>
     <types>
-        <members>ClaytonCopadoIntegration__c</members>
-        <name>CustomObject</name>
+        <members>MyNewFlow</members>
+        <name>FlowDefinition</name>
     </types>
     <version>57.0</version>
 </Package>
