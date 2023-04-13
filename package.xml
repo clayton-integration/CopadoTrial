@@ -1,24 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>MyController</members>
+        <members>GeocodingService</members>
+        <members>GeocodingServiceTest</members>
+        <members>MyExampleClassTest</members>
+        <members>SOQLController</members>
+        <members>SOQLController2</members>
         <name>ApexClass</name>
-    </types>
-    <types>
-        <members>MyNewFlow</members>
-        <name>Flow</name>
-    </types>
-    <types>
-        <members>MyNewFlow</members>
-        <name>FlowDefinition</name>
-    </types>
-    <types>
-        <members>Case.MyCases</members>
-        <name>ListView</name>
-    </types>
-    <types>
-        <members>My_Shopping_List_Developer3</members>
-        <name>PermissionSet</name>
     </types>
     <version>57.0</version>
 </Package>
